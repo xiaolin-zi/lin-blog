@@ -81,7 +81,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 46
+			总文章数 45
 		</nav>
 		<nav>
 			总字数 <span class="post-count">636.7k</span>
@@ -193,108 +193,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-javaScript高级" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/02/javaScript%E9%AB%98%E7%BA%A7/">JavaScript高级篇</a>
-    </h1>
-  
-
-		<!--显示阅读次数-->
-		
-		<!--显示阅读次数完毕-->
-        
-        <a href="/2022/11/02/javaScript%E9%AB%98%E7%BA%A7/" class="archive-article-date">
-  	<time datetime="2022-11-02T15:19:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-02</time>
-</a>
-        
-      </header>
-	  <div align="center" class="post-count">
-		字数：14.2k字 | 预计阅读时长：67分钟
-	  </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-		
-
-      
-        <meta name="referrer" content="no-referrer" />
-# js高级
-
-<p>[Toc]</p>
-<h2 id="一、基础总结深入"><a href="#一、基础总结深入" class="headerlink" title="一、基础总结深入"></a>一、基础总结深入</h2><h3 id="1、数据类型1"><a href="#1、数据类型1" class="headerlink" title="1、数据类型1"></a>1、数据类型1</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>01_数据类型<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">1. 分类</span></span><br><span class="line"><span class="comment">    基本（值）类型</span></span><br><span class="line"><span class="comment">        -String:任意字符串</span></span><br><span class="line"><span class="comment">        -Number：任意数字</span></span><br><span class="line"><span class="comment">        -boolean：true false</span></span><br><span class="line"><span class="comment">        -undefined：undefined</span></span><br><span class="line"><span class="comment">        -null：null</span></span><br><span class="line"><span class="comment">    对象（引用）类型</span></span><br><span class="line"><span class="comment">        -Object：任意对象</span></span><br><span class="line"><span class="comment">            -Fucition：一种特别的对象（可以执行）</span></span><br><span class="line"><span class="comment">            -Array:一种特别的对象（数值下标,内部数据是有序的）</span></span><br><span class="line"><span class="comment">2. 判断</span></span><br><span class="line"><span class="comment">    1、typeof</span></span><br><span class="line"><span class="comment">        -可以判断undefined，数值,字符串，布尔值,function</span></span><br><span class="line"><span class="comment">        -不能判断null和Object，Object和array</span></span><br><span class="line"><span class="comment">    2、instanceof</span></span><br><span class="line"><span class="comment">        -判断对象的具体类型</span></span><br><span class="line"><span class="comment">    3、===</span></span><br><span class="line"><span class="comment">        -可以判断undefined,null</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 1、基本</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> a;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="keyword">typeof</span> a,<span class="keyword">typeof</span> a===<span class="string">&#x27;undefined&#x27;</span>,a===<span class="literal">undefined</span>);<span class="comment">//undefined &#x27;undefined&#x27; true true</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">undefined</span>===<span class="string">&#x27;undefined&#x27;</span>);<span class="comment">//false</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    a=<span class="number">3</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a===<span class="string">&#x27;number&#x27;</span> );<span class="comment">//true</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    a=<span class="string">&#x27;xiaolin&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a===<span class="string">&#x27;string&#x27;</span>);<span class="comment">//true</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    a=<span class="literal">true</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a===<span class="string">&#x27;boolean&#x27;</span>);<span class="comment">//true</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    a=<span class="literal">null</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a,a===<span class="literal">null</span>);<span class="comment">//object,true</span></span></span><br><span class="line"><span class="language-javascript">    </span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;=====================&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> b1=&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">b2</span>:[<span class="number">1</span>,<span class="string">&quot;abc&quot;</span>,<span class="variable language_">console</span>.<span class="property">log</span>],</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">b3</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;b3&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">return</span> <span class="string">&#x27;xiaolin&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(b1 <span class="keyword">instanceof</span> <span class="title class_">Object</span>,b1 <span class="keyword">instanceof</span> <span class="title class_">Array</span>);<span class="comment">//true false  </span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(b1.<span class="property">b2</span> <span class="keyword">instanceof</span> <span class="title class_">Array</span>,b1.<span class="property">b2</span> <span class="keyword">instanceof</span> <span class="title class_">Object</span>);<span class="comment">//true true</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(b1.<span class="property">b3</span> <span class="keyword">instanceof</span> <span class="title class_">Function</span>,b1.<span class="property">b3</span> <span class="keyword">instanceof</span> <span class="title class_">Object</span>);<span class="comment">//true true</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b1.<span class="property">b2</span>);<span class="comment">//object</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b1.<span class="property">b3</span>,<span class="keyword">typeof</span> b1.<span class="property">b3</span>===<span class="string">&#x27;function&#x27;</span>);<span class="comment">// &#x27;fucction&#x27; true</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b1.<span class="property">b2</span>[<span class="number">2</span>]===<span class="string">&#x27;function&#x27;</span>);<span class="comment">//true</span></span></span><br><span class="line"><span class="language-javascript">    b1.<span class="property">b2</span>[<span class="number">2</span>](<span class="number">4</span>);<span class="comment">//4</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(b1.<span class="title function_">b3</span>()());<span class="comment">//xiaolin</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    b1.<span class="title function_">b3</span>();<span class="comment">//b3</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">/* var obj = &#123;</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">        name:&quot;Tom&quot;,</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">        age:18</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">    &#125;;</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">    function test()&#123;</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">        var a=3;</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">    &#125;</span></span></span><br><span class="line"><span class="comment"><span class="language-javascript">    var arr=[3,&quot;abc&quot;]; */</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// alert(arr[1]);</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2022/11/02/javaScript%E9%AB%98%E7%BA%A7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-	 
-		
-		
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端学习笔记//" class="article-tag-list-link color2">前端学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/11/02/javaScript%E9%AB%98%E7%BA%A7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
     <article id="post-尚硅谷JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -757,7 +655,7 @@
 <p>4、请求和响应的关系</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请求和响应是承兑出现的，有请求就有响应。</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/lin-xugeng/image2/raw/master/img/202302131215001.png" alt="image-20220524222725474"></p>
+<p><img src="https://xiaolin-zi.oss-cn-guangzhou.aliyuncs.com/typora-img/img/202302131215001.png" alt="image-20220524222725474"></p>
         
           <a class="article-more-a" href="/2022/10/22/Tomcat&Servlet/#more">more >></a>
         
@@ -1257,6 +1155,111 @@
 
 
   
+    <article id="post-jdbcTemplate（概念和准备）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/22/jdbcTemplate%EF%BC%88%E6%A6%82%E5%BF%B5%E5%92%8C%E5%87%86%E5%A4%87%EF%BC%89/">JDBCTemplate</a>
+    </h1>
+  
+
+		<!--显示阅读次数-->
+		
+		<!--显示阅读次数完毕-->
+        
+        <a href="/2022/10/22/jdbcTemplate%EF%BC%88%E6%A6%82%E5%BF%B5%E5%92%8C%E5%87%86%E5%A4%87%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2022-10-22T08:19:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-22</time>
+</a>
+        
+      </header>
+	  <div align="center" class="post-count">
+		字数：1.4k字 | 预计阅读时长：7分钟
+	  </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+		
+
+      
+        <meta name="referrer" content="no-referrer" />
+# jdbcTemplate（概念和准备）
+
+<h2 id="1、什么是JdbcTemplate"><a href="#1、什么是JdbcTemplate" class="headerlink" title="1、什么是JdbcTemplate"></a>1、什么是JdbcTemplate</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、Spring框架对JDBC进行封装，使用JdbcTemplate方便实现对数据库的操作</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、准备工作"><a href="#2、准备工作" class="headerlink" title="2、准备工作"></a>2、准备工作</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、引入相关依赖</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/lin-xugeng/image2/raw/master/img/202310122120368.png" alt="image-20220523114457976"></p>
+        
+          <a class="article-more-a" href="/2022/10/22/jdbcTemplate%EF%BC%88%E6%A6%82%E5%BF%B5%E5%92%8C%E5%87%86%E5%A4%87%EF%BC%89/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jdbc</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+	 
+		
+		
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据库//" class="article-tag-list-link color4">数据库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/10/22/jdbcTemplate%EF%BC%88%E6%A6%82%E5%BF%B5%E5%92%8C%E5%87%86%E5%A4%87%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
@@ -1494,10 +1497,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Tomcat、Servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
