@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-07T08:11:42.815Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="-6V01fDU99UhmGZT64_J" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-07T08:13:31.249Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="9xCtb2A8i_VRbiO7zJI5" version="24.3.1" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
     <mxGraphModel dx="2392" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -438,12 +438,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="q6NIXt8k8cD3QEOPo4rP-183" value="DialogueMapper" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="480" y="1680" width="100" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="q6NIXt8k8cD3QEOPo4rP-184" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="q6NIXt8k8cD3QEOPo4rP-183">
-          <mxGeometry x="45" y="110" width="10" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="q6NIXt8k8cD3QEOPo4rP-185" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
           <mxGeometry x="-60" y="1680" width="20" height="300" as="geometry" />
         </mxCell>
@@ -474,14 +468,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q6NIXt8k8cD3QEOPo4rP-192" value="调用Service层search方法&lt;div&gt;处理搜索内容业务逻辑&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="q6NIXt8k8cD3QEOPo4rP-192" value="调用Service层chat方法&lt;div&gt;处理搜索内容业务逻辑&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="205" y="1790" as="sourcePoint" />
             <mxPoint x="365" y="1790" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q6NIXt8k8cD3QEOPo4rP-193" value="调用Mapper层搜索&lt;div&gt;帖子或用户记录&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="q6NIXt8k8cD3QEOPo4rP-193" value="调用HttpClient访问GPT或&lt;div&gt;文心一言接口获取数据&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry x="-0.0019" width="80" relative="1" as="geometry">
             <mxPoint x="375" y="1800" as="sourcePoint" />
             <mxPoint x="525" y="1800" as="targetPoint" />
@@ -495,19 +489,22 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q6NIXt8k8cD3QEOPo4rP-195" value="根据查询结果，执行&lt;div&gt;判断逻辑，封装统&lt;/div&gt;&lt;div&gt;一返回结果R并返回&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="q6NIXt8k8cD3QEOPo4rP-188">
+        <mxCell id="q6NIXt8k8cD3QEOPo4rP-195" value="使用EventSteam返回接口" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="q6NIXt8k8cD3QEOPo4rP-188">
           <mxGeometry x="0.0323" y="-10" relative="1" as="geometry">
             <mxPoint x="360" y="1880" as="sourcePoint" />
             <mxPoint x="280" y="1880" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q6NIXt8k8cD3QEOPo4rP-196" value="return封装好的统一返回结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="q6NIXt8k8cD3QEOPo4rP-180">
-          <mxGeometry x="0.0018" relative="1" as="geometry">
+        <mxCell id="q6NIXt8k8cD3QEOPo4rP-196" value="return结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="q6NIXt8k8cD3QEOPo4rP-180">
+          <mxGeometry x="-0.0011" relative="1" as="geometry">
             <mxPoint x="190" y="1890" as="sourcePoint" />
             <mxPoint x="60" y="1890" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="q6NIXt8k8cD3QEOPo4rP-197" value="HttpClient" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="480" y="1680" width="100" height="300" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
